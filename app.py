@@ -46,7 +46,7 @@ def heatmap():
             # save the file
         print(uploaded_file.filename)
 
-        if file_path.split('.')[-1]:
+        if file_path.split('.')[-1]=='csv':
             data = pd.read_csv(file_path)
         else:
             data = pd.read_csv(file_path, sep='\t')
