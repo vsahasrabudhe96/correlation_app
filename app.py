@@ -8,11 +8,14 @@ app = Flask(__name__)
 
 app.config["DEBUG"] = True
 
-# ROOT = os.path.dirname(os.path.abspath(__file__))
+if not os.path.exists("static/files"):
+    os.mkdir("static/")
+    os.mkdir("static/files")
+if not os.path.exists("heatmaps/"):
+    os.mkdir("heatmaps/")
 
 UPLOAD_FOLDER = 'static/files'
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-
 
 
 IMAGE_FOLDER = 'heatmaps/'
