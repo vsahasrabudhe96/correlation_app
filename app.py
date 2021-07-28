@@ -45,7 +45,11 @@ def heatmap():
         print("SAVING THE FILE")
             # save the file
         print(uploaded_file.filename)
-        data = pd.read_csv(file_path)
+
+        if file_path.split('.')[-1]:
+            data = pd.read_csv(file_path)
+        else:
+            data = pd.read_csv(file_path, sep='\t')
         print("DATA READ PROPERLY")
         sns.set(rc={'figure.figsize':(16,6)})
         # plt.figure(figsize=(16, 6))
