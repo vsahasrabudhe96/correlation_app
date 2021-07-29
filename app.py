@@ -8,13 +8,12 @@ app = Flask(__name__)
 
 app.config["DEBUG"] = True
 
-if not os.path.exists("static/files"):
-    os.mkdir("static/")
-    os.mkdir("static/files")
+if not os.path.exists("input/files"):
+    os.mkdir("input/")
+    os.mkdir("input/files")
 if not os.path.exists("heatmaps/"):
     os.mkdir("heatmaps/")
-
-UPLOAD_FOLDER = 'static/files'
+UPLOAD_FOLDER = 'input/files'
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 

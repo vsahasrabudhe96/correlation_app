@@ -4,13 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FLASK CSV FILE UPLOAD</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Detector</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+
+<footer class="footer">
+  <div class="container">
+      <div align='center' style="width: 50%; float: left;">
+          <a href="https://www.linkedin.com/in/varunsahasrabudhe/" target="_blank">
+          <img src="{{url_for('static',filename='/images/linked.png')}} " alt=""width='50'height='50'align ="center">
+
+          </a>
+      </div>
+      <div align='center' style="width: 50%;float: right;">
+          <a href="https://github.com/vsahasrabudhe96/" target="_blank">
+          <img src="{{url_for('static',filename='/images/github.png')}}" alt=""width='50'height='50'align ="center">
+
+          </a>
+      </div>
+      <p align ="center"><span style="color: black; font-size: large;"> 
+           Created by Varun Sahasrabudhe.
+      </p></span>
+  </div>
+
+</footer>
+<style>
+  .footer{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(120, 120, 201);
+      padding-top: 0px;
+      padding-bottom: 0px;
+  };
+  .content{
+      color: #002f4d;
+  }
+  .boxes{
+      width:50%;
+      float:left;
+      }
+</style>
+</body>
+
 <body>
-    <h1 align='center'>FLASK CSV FILE UPLOADER</h1>
-    <form align='center' action="{{url_for('heatmap')}}" method="POST" enctype="multipart/form-data">
-        <input type="file" name="csvfile">
-        <input type="submit" value="Submit">
-    </form>
+    <div>
+        <h1 align='center'>FLASK CSV FILE UPLOADER</h1>
+        <form align='center' action="{{url_for('heatmap')}}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="csvfile">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+            <!-- <input type="submit" value="Submit"> -->
+
+        </form>
+    </div>
+    
 </body>
 </html>
